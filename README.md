@@ -3,7 +3,7 @@ Conway's Game of Life in Ruby
 
 Using no conditionals and on a torus.
 
-Implemented at the Mississauga Code Retreat on June 9th in a 45-minute session.
+Implemented at the Mississauga Code Retreat on June 9th, 2012 during a 45 minute session.
 
 Usage
 -----

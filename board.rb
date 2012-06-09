@@ -24,8 +24,8 @@ class Board
     offset = -1..1
 
     offset.reduce(0) do |alive_cols, row_offset|
-      alive_cols += offset.reduce(0) do |alive_rows, col_offset|
-        alive_rows += self.cells[(row + row_offset) % self.width][(col + col_offset) % self.height].alive_count
+      alive_cols + offset.reduce(0) do |alive_rows, col_offset|
+        alive_rows + self.cells[(row + row_offset) % self.width][(col + col_offset) % self.height].alive_count
       end
     end - self.cells[row][col].alive_count
   end
@@ -78,7 +78,7 @@ end
 {
   [0, 1] => false,
   [2, 3] => true,
-  [4,5,6,7,8,9] => false
+  [4, 5, 6, 7, 8] => false
 }.each do |k,v|
   k.each do |num|
     num.alive = v
